@@ -32,12 +32,15 @@ walkLeft = [
     pygame.image.load('L8.png'),
     pygame.image.load('L9.png')
 ]
+bg = pygame.image.load('bg.jpg')
+char = pygame.image.load('standing.png')
+
 
 screenWidth = 500
 x = 50
 y = 50
-width = 40
-height = 60
+width = 64
+height = 64
 vel = 10
 isJump = False
 jumpCount = 10
