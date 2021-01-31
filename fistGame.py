@@ -48,6 +48,14 @@ left = False
 right = False
 walkCount = 0
 
+
+def redrawGameWindow():
+    global walkCount
+    win.blit(bg, (0, 0))
+    pygame.draw.rect(win, (255, 0, 0), (x, y, width, height))
+    pygame.display.update()
+
+
 # main loop
 run = True
 while run:
@@ -77,8 +85,7 @@ while run:
             isJump = False
             jumpCount = 10
 
-    win.fill((0, 0, 0))
-    pygame.draw.rect(win, (255, 0, 0), (x, y, width, height))
-    pygame.display.update()
+    redrawGameWindow()
+
 
 pygame.quit()
