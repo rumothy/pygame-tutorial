@@ -11,10 +11,10 @@ y = 50
 width = 40
 height = 60
 vel = 10
-
 isJump = False
 jumpCount = 10
 
+# main loop
 run = True
 while run:
     pygame.time.delay(100)
@@ -30,10 +30,6 @@ while run:
     if keys[pygame.K_RIGHT] and x < screenWidth - width - vel:
         x += vel
     if not(isJump):
-        if keys[pygame.K_UP] and y > vel:
-            y -= vel
-        if keys[pygame.K_DOWN] and y < screenWidth - height - vel:
-            y += vel
         if keys[pygame.K_SPACE]:
             isJump = True
     else:
